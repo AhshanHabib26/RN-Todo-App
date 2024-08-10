@@ -6,8 +6,14 @@ export default function InputSearch() {
   return (
     <View style={styles.container}>
       <View style={styles.flex}>
-        <TextInput style={styles.input} placeholder="Add your new todo" />
-        <AntDesign style={styles.icon} name="plus" size={30}  />
+        <TextInput
+          keyboardType="default"
+          autoComplete="false"
+          autoCapitalize="false"
+          style={styles.input}
+          placeholder="Add your new todo"
+        />
+        <AntDesign style={styles.icon} name="plus" size={30} />
       </View>
     </View>
   );
@@ -16,7 +22,7 @@ export default function InputSearch() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 20,
   },
   flex: {
     display: "flex",
@@ -25,7 +31,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 50,
-    width: "80%",
+    width: "85%",
     borderWidth: 1,
     borderColor: "#363636",
     borderRadius: 5,
@@ -38,6 +44,6 @@ const styles = StyleSheet.create({
     color: "#fff",
     padding: 8,
     borderRadius: 5,
-    cursor: 'pointer'
+    cursor: "pointer",
   },
 });
