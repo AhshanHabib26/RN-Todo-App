@@ -1,18 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import InputSearch from "./components/InputSearch";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>Todo App</Text>
+      <View>
+        <InputSearch />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 10
+  },
+  text: {
+    fontSize: 25,
   },
 });
